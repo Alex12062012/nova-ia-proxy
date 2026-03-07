@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: nova-ia-proxy
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
